@@ -51,6 +51,7 @@ body {
     border-bottom: 3px solid #4cb40b;
     text-shadow: 0 0 3px #5b5b5b;
     border-radius: 18px 0 18px 0px;
+    transition: 1s ease all;
 }
 .test__btn:hover {
     background-color: #357c09;

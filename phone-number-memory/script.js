@@ -4,22 +4,103 @@ let numbers = ['9177724582', '9373044429', '9280071807', '3478252748', '34782514
 let numberLength = numbers.length
 let i = 0
 let delay = 3000
+
+let testText = document.querySelector('#testText');
 /* for(number in numbers) {
     document.write(numbers[number]+'\n');
 } */
-document.querySelector('#testBtnE').addEventListener('click', (e) => {
+/* document.querySelector('.test__btn').addEventListener('click', (e) => {
     e.preventDefault()
+    console.log(e)
     testForm()
+}) */
+
+let btns = document.querySelectorAll('.test__btn')
+
+btns.forEach(element => {
+    element.addEventListener('click', e => {
+        e.preventDefault()
+        console.log(e.target.id)
+        switch(e.target.id) {
+            case 'testBtnB':
+                backspaceLast()
+            break;
+            case 'testBtnE':
+                testForm()
+            break;
+            case 'testBtn0':
+                keybTyping(0)
+            break;
+            case 'testBtn1':
+                keybTyping(1)
+            break;
+            case 'testBtn2':
+                keybTyping(2)
+            break;
+            case 'testBtn3':
+                keybTyping(3)
+            break;
+            case 'testBtn4':
+                keybTyping(4)
+            break;
+            case 'testBtn5':
+                keybTyping(5)
+            break;
+            case 'testBtn6':
+                keybTyping(6)
+            break;
+            case 'testBtn7':
+                keybTyping(7)
+            break;
+            case 'testBtn8':
+                keybTyping(8)
+            break;
+            case 'testBtn9':
+                keybTyping(9)
+            break;
+            default: ;
+        }
+    })
 })
 
+
 window.addEventListener('keydown', (e) => {
-    if(e.key == 'Enter') {
-        if(document.activeElement.name == 'testText') {
-            e.preventDefault()
+    e.preventDefault()
+    console.log(e.key)
+    switch(e.key) {
+        case 'Enter':
             testForm()
-        }
+        break;
+        case 'Backspace':
+            backspaceLast()
+        break;
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+        case '0':
+            keybTyping(e.key)
+        break;
+        default: ;
     }
 })
+
+const backspaceLast = () => {
+    testText.value = testText.value.slice(0, -1)
+}
+
+const keybTyping = num => {
+    if(testText.value.length < 10) {
+        testText.value += num;
+    } else {
+        alert('10 цифр должно быть')
+    }
+}
 
 const setText = () => {
     document.querySelector('#seeText').innerText = numbers[i]
@@ -36,6 +117,8 @@ const clearText = () => {
     document.querySelector('#see').style.display = 'none'
     document.querySelector('#test').style.display = 'block'
     document.querySelector('#testText').focus()
+    document.querySelector('.bad').style.display = 'none'
+    document.querySelector('.good').style.display = 'none'
 }
 
 const testForm = () => {
