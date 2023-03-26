@@ -6,14 +6,6 @@ let i = 0
 let delay = 10000
 
 let testText = document.querySelector('#testText');
-/* for(number in numbers) {
-    document.write(numbers[number]+'\n');
-} */
-/* document.querySelector('.test__btn').addEventListener('click', (e) => {
-    e.preventDefault()
-    console.log(e)
-    testForm()
-}) */
 
 let btns = document.querySelectorAll('.test__btn')
 
