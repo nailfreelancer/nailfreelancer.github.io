@@ -3,7 +3,7 @@ body {
 }
 .good,
 .bad {
-    width: 300px;
+    width: 100px;
     display: none;
     position: fixed;
 }
