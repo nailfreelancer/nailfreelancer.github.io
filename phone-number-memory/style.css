@@ -39,6 +39,8 @@ body {
     border-bottom: 3px solid #000;
     outline: none;
     letter-spacing: 0.15em;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 .test__btn {
     cursor: pointer;
@@ -49,6 +51,55 @@ body {
     border-bottom: 3px solid #4cb40b;
     text-shadow: 0 0 3px #5b5b5b;
     border-radius: 18px 0 18px 0px;
+}
+.test__btn:hover {
+    background-color: #357c09;
+}
+.buttons {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "test__btn1 test__btn2 test__btn3"
+    "test__btn4 test__btn5 test__btn6"
+    "test__btn7 test__btn8 test__btn9"
+    "test__btnB test__btn0 test__btnE";
+}
+.test__btn1 {
+    grid-area: test__btn1;
+}
+.test__btn2 {
+    grid-area: test__btn2;
+}
+.test__btn3 {
+    grid-area: test__btn3;
+}
+.test__btn4 {
+    grid-area: test__btn4;
+}
+.test__btn5 {
+    grid-area: test__btn5;
+}
+.test__btn6 {
+    grid-area: test__btn6;
+}
+.test__btn7 {
+    grid-area: test__btn7;
+}
+.test__btn8 {
+    grid-area: test__btn8;
+}
+.test__btn9 {
+    grid-area: test__btn9;
+}
+.test__btnB {
+    grid-area: test__btnB;
+}
+.test__btn0 {
+    grid-area: test__btn0;
+}
+.test__btnE {
+    grid-area: test__btnE;
 }
 
 @media screen and (max-width: 480px) {
