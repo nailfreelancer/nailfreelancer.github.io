@@ -3,7 +3,7 @@ let numbers = ['9177724582', '9373044429', '9280071807', '3478252748', '34782514
 
 let numberLength = numbers.length
 let i = 0
-let delay = 3000
+let delay = 10000
 
 let testText = document.querySelector('#testText');
 /* for(number in numbers) {

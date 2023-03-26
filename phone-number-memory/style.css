@@ -58,7 +58,7 @@ body {
 }
 .buttons {
     display: grid;
-    gap: 2rem;
+    gap: 10px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "test__btn1 test__btn2 test__btn3"
