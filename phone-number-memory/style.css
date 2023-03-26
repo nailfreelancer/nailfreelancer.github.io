@@ -50,3 +50,16 @@ body {
     text-shadow: 0 0 3px #5b5b5b;
     border-radius: 18px 0 18px 0px;
 }
+
+@media screen and (max-width: 480px) {
+    .test {
+        text-align: center;
+    }
+    .test__text {
+        width: 100%;
+    }
+    .test__btn {
+        margin-top: 20px;
+        border-radius: none;
+    }
+}
