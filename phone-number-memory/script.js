@@ -58,7 +58,7 @@ btns.forEach(element => {
 
 window.addEventListener('keydown', (e) => {
     e.preventDefault()
-    console.log(e.key)
+    //console.log(e.key)
     switch(e.key) {
         case 'Enter':
             testForm()
@@ -132,4 +132,14 @@ const testForm = () => {
     }
 }
 
-setText()
+let nshsr = new Promise((resolve, reject) => {
+    resolve(
+        numbers = numbers.sort(() => {
+            return Math.random() - 0.5
+        })
+    )
+})
+
+nshsr.then(() => {
+    setText()
+})
