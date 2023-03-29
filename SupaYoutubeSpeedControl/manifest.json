@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Supa Youtube Speed Control",
+  "version": "1.0",
+  "description": "This extension allows you to control the playback speed of YouTube videos using keyboard shortcuts.",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
+  
